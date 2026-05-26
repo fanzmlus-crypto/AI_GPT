@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: #0d0208;
+  color: #00ff41;
+}
+
+.worm-glow {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.worm-glow-text {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+.worm-border {
+  border: 1px solid rgba(0, 255, 65, 0.3);
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #0d0208;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 3px;
+}
+
+.message-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing-dot {
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.premium-pulse {
+  animation: premiumPulse 2s infinite;
+}
+
+@keyframes premiumPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.7);
+  }
+}
+
+pre {
+  background: #1a0f14;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+}
+
+code {
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+}
+
+input:focus {
+  outline: none;
+}
